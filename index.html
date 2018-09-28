@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>coffeeRun</title>
+  <!-- links to bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body class="container">
+  <header>
+    <h1>CoffeeRun</h1>
+  </header>
+  <!-- sections logically group markup -->
+  <section>
+    <!-- div is a container type, form is a container type -->
+    <!-- panel panel-default and panel-body are bootstrap classes to trigger styles -->
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <form data-coffee-order="form">
+          <div class="form-group">
+            <label for="coffeeOrder">Coffee Order</label>
+            <!-- input receives text -->
+            <input class="form-control" name="coffee" id="coffeeOrder" autofocus>
+          </div>
+          <div class="form-group">
+            <label for="emailInput">Email</label>
+            <input class="form-control" type="email" name="emailAddress" id="emailInput" value="" placeholder="dr@who.com">
+          </div>
+          <!-- list of radio buttons, all "size" will be grouped together -->
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="short">
+              Short
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="tall" checked>
+              Tall
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="grande">
+              Grande
+            </label>
+          </div>
+          <!-- dropdown -->
+          <div class="form-group">
+            <label for="flavorShot">Flavor Shot</label>
+            <!-- code for dropdown list -->
+            <select id="flavorShot" class="form-control" name="flavor">
+              <option value="" selected>None</option>
+              <option value="caramel">Caramel</option>
+              <option value="almond">Almond</option>
+              <option value="mocha">Mocha</option>
+            </select>
+          </div>
+          <!-- ranger slider -->
+          <div class="form-group">
+            <label for="strengthLevel">Caffeine Rating</label>
+            <input name="strength" id="strengthLevel" type="range" value="30">
+          </div>
+          <!-- Buttons -->
+          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="reset" class="btn btn-default">Reset</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- tells the .html to include the .js files -->
+  <script src="scripts/datastore.js" charset="utf-8"></script>
+  <script src="scripts/truck.js" charset="utf-8"></script>
+  <script src="scripts/main.js" charset="utf-8"></script>
+</body>
+
+</html>
